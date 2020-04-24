@@ -16,7 +16,7 @@ import { Container, Content, Background } from './styles';
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const handleSbmit = useCallback(async (data: object) => {
+  const handleSubmit = useCallback(async (data: object) => {
     try {
       formRef.current?.setErrors({});
 
@@ -47,7 +47,7 @@ const SignUp: React.FC = () => {
       <Content>
         <img src={logoImg} alt="Go Barber" />
 
-        <Form ref={formRef} onSubmit={handleSbmit}>
+        <Form ref={formRef} onSubmit={handleSubmit}>
           <h1>Faça seu cadastro</h1>
 
           <Input name="name" placeholder="Nome" icon={FiUser} />
