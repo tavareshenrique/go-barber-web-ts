@@ -4,7 +4,7 @@ import DayPicker, { DayModifiers } from 'react-day-picker';
 import { FiPower, FiClock } from 'react-icons/fi';
 
 import { useAuth } from '~/hooks/AuthContext';
-import MonthAvailability from './interfaces/MonthAvailability';
+import IMonthAvailability from './interfaces/IMonthAvailability';
 
 import api from '~/services/api';
 
@@ -30,7 +30,7 @@ const Dashboard: React.FC = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
   const [monthAvailability, setMonthAvailability] = useState<
-    MonthAvailability[]
+    IMonthAvailability[]
   >([]);
 
   const handleDateChange = useCallback((day: Date, modifiers: DayModifiers) => {

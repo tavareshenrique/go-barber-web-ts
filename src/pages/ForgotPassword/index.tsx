@@ -11,17 +11,14 @@ import api from '~/services/api';
 
 import { useToast } from '~/hooks/ToastContext';
 
+import IForgotPasswordFormData from './interfaces/IForgotPasswordFormData';
+
 import Input from '~/components/Input';
 import Button from '~/components/Button';
 
 import logoImg from '~/assets/logo.svg';
 
 import { Container, Content, AnimationContainer, Background } from './styles';
-
-interface ForgotPasswordFormData {
-  email: string;
-  password: string;
-}
 
 const ForgotPassword: React.FC = () => {
   const [loading, setLoading] = useState(false);
@@ -30,7 +27,7 @@ const ForgotPassword: React.FC = () => {
   const { addToast } = useToast();
 
   const handleSubmit = useCallback(
-    async (data: ForgotPasswordFormData) => {
+    async (data: IForgotPasswordFormData) => {
       try {
         setLoading(true);
 

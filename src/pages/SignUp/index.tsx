@@ -10,18 +10,14 @@ import { useToast } from '~/hooks/ToastContext';
 import api from '~/services/api';
 import getValidationErrors from '~/utils/getValidationErrors';
 
-import logoImg from '~/assets/logo.svg';
+import ISignUpFormData from './interfaces/ISignUpFormData';
 
 import Input from '~/components/Input';
 import Button from '~/components/Button';
 
-import { Container, Content, AnimationContainer, Background } from './styles';
+import logoImg from '~/assets/logo.svg';
 
-interface SignUpFormData {
-  name: string;
-  email: string;
-  password: string;
-}
+import { Container, Content, AnimationContainer, Background } from './styles';
 
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
@@ -30,7 +26,7 @@ const SignUp: React.FC = () => {
   const { addToast } = useToast();
 
   const handleSubmit = useCallback(
-    async (data: SignUpFormData) => {
+    async (data: ISignUpFormData) => {
       try {
         formRef.current?.setErrors({});
 

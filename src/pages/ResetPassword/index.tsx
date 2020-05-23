@@ -11,17 +11,14 @@ import api from '~/services/api';
 
 import { useToast } from '~/hooks/ToastContext';
 
+import IResetPasswordFormData from './interfaces/IResetPasswordFormData';
+
 import Input from '~/components/Input';
 import Button from '~/components/Button';
 
 import logoImg from '~/assets/logo.svg';
 
 import { Container, Content, AnimationContainer, Background } from './styles';
-
-interface ResetPasswordFormData {
-  password: string;
-  password_confirmation: string;
-}
 
 const ResetPassword: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
@@ -31,7 +28,7 @@ const ResetPassword: React.FC = () => {
   const { addToast } = useToast();
 
   const handleSubmit = useCallback(
-    async (data: ResetPasswordFormData) => {
+    async (data: IResetPasswordFormData) => {
       try {
         const { password, password_confirmation } = data;
         const token = location.search.replace('?token=', '');
