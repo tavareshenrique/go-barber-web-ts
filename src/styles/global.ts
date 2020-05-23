@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import 'react-day-picker/lib/style.css';
+
 export default createGlobalStyle`
   * {
     margin: 0;
