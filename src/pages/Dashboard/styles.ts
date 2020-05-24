@@ -161,6 +161,23 @@ export const Section = styled.section`
   }
 `;
 
+export const NoScheduling = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 250px;
+    height: 250px;
+  }
+
+  p {
+    color: #f4ede8;
+    font-weight: 500;
+  }
+`;
+
 export const Appointment = styled.div`
   display: flex;
   align-items: center;
