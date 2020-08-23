@@ -89,4 +89,4 @@ npm start
 
 # :memo: License
 
-This project is licensed under the MIT license - see the archive [LICENSE.md](https://github.com/tavareshenrique/go-barber-web-tsb/blob/master/LICENSE.md) for details.
+This project is licensed under the MIT license - see the archive [LICENSE.md](https://github.com/tavareshenrique/go-barber-web-ts/blob/master/LICENSE.md) for details.
